@@ -1,0 +1,222 @@
+.like{
+	width: 250px;
+	margin: 50px, 0;
+}
+
+.vote{
+	margin-top: 20px;
+	width : 100%;
+	height: 4px;
+	background-color: purple;
+	text-align: left;
+}
+
+.vote_progress{
+	height: 4px;
+	background-color:rgb(255, 153, 0);
+}
+
+.vote_btns{
+	margin-top: 10px;
+	text-align : right;
+	display: flex;
+	justify-content: center;
+}
+
+.vote_btn {
+	display: inline-block;
+	margin-left: 20px;
+	cursor: pointer;
+	padding : 10px;
+	transition: color 0.3s;
+}
+
+.vote_like:hover {
+	color: rgb(255, 153, 0);
+}
+
+.vote_dislike:hover {
+	color: purple;
+}
+
+#pics{
+	margin: 50px;
+	padding: 10px;
+	display: inline-flex;
+	height: 690px;
+	overflow: auto;
+	border: rgba(255, 255, 255, 0.38);
+	border-style : solid hidden solid solid;
+	border-radius: 30px 10px 10px 30px;
+}
+
+/* width */
+#pics::-webkit-scrollbar {
+	width: 10px;
+	border-radius: 30px;
+}
+
+/* Track */
+#pics::-webkit-scrollbar-track {
+	background: rgba(255, 255, 255, 0.38); 
+	border-radius: 30px;
+}
+ 
+/* Handle */
+#pics::-webkit-scrollbar-thumb {
+	background: rgba(255, 255, 255, 0.58); 
+	border-radius: 30px;
+}
+
+/* Handle on hover */
+#pics::-webkit-scrollbar-thumb:hover {
+	background: rgba(255, 153, 0, 0.58);
+	border-radius: 30px;
+}
+
+button {
+	background-color: rgba(255, 0, 221, 0.6);
+	border: none;
+    border-radius: 30px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+	font-size: 16px;
+	transition: color 0.3s;
+}
+
+button:hover {
+	background-color: rgba(255, 0, 221, 0.8);
+}
+
+.gallery {
+	flex-wrap: wrap;
+	justify-content: center;
+	flex-direction: row;
+}
+
+.gallery_pic {
+	margin: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+#cam{
+	display: inline-flex;
+}
+
+
+.us_gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fill,minmax(350px, 1fr));
+	max-width : 80%;
+	margin-top: 50px;
+}
+
+textarea{
+	width: 640px;
+	border-radius: 0 0 30px 30px;
+	padding: 8px;
+	font-size: 12px;
+	border-color:  rgba(255, 0, 221, 0.2);
+}
+
+.comm{
+	padding: 10px;
+	margin: 10px;
+	display: -webkit-box;
+}
+
+#comments{
+	background-color: rgba(255, 0, 221, 0.6);
+	border-radius: 30px 10px 0 0;
+	width : 640px;
+	max-height : 90px;
+	overflow: auto;
+}
+
+/* width */
+#comments::-webkit-scrollbar {
+	width: 10px;
+	border-radius: 30px;
+}
+ 
+/* Handle */
+#comments::-webkit-scrollbar-thumb {
+	background: rgba(255, 0, 221, 0.38); 
+	border-radius: 30px;
+}
+
+/* Handle on hover */
+#comments::-webkit-scrollbar-thumb:hover {
+	background: rgba(255, 0, 221, 0.58);
+	border-radius: 30px;
+}
+
+
+#comments .login{
+	margin : 10 80px 0 80px;
+	color:white;
+	text-align: left;
+}
+
+#comments .comm_val{
+	margin : 0 50px 0 50px;
+	text-align: left;
+	font-size: 13px;
+}
+
+#comments .comm_date{
+	margin : 10 50px 10 50px;
+	text-align: right;
+	font-style: italic;
+	font-size: 10px;
+}
+
+#share {
+	display: flex;
+	width: 30%;
+	justify-content: space-between;
+}
+
+@media screen and (max-width: 1280px)
+{
+	#share {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+	}
+
+	#comm {
+		display: flex;
+		flex-direction: column;
+		max-width: 330px;
+	}
+
+	#comments {
+		max-width: 330px;
+	}
+
+	.gallery_pic{
+		margin: 0px;
+	}
+
+	#gal-pic {
+		margin: 50px;
+	}
+	
+	textarea{
+		max-width: 330px;
+	}
+
+	#pics{
+		max-width: 330px;
+		max-height: 340px;
+		margin: 0px;
+		margin-top: 20px;
+	}
+}

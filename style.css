@@ -1,0 +1,536 @@
+@font-face {
+    font-family: "ana";
+    src: url("./inc/typo/conta.ttf");
+}
+
+html {
+	margin: 0px;
+	padding: 0px;
+	width: 100%; 
+	height: 100%;
+	background-color: aquamarine;
+	background-repeat: no-repeat;
+	text-align: center;
+}
+
+body {
+    font-family: "ana";
+    margin: 0px;
+	text-align: -webkit-center;
+	min-height: 100%;
+	position: relative;
+	padding-bottom: 100px;
+}
+
+img {
+	border-radius: 30px;
+	max-height: 480px;
+	max-width: 640px;
+}
+
+h2 {
+	padding: 20px;
+}
+
+footer{
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 0, 221, 0.6)));;
+	vertical-align: bottom;
+	height: 25px;
+	padding-top: 70px;
+	margin : 0;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	color: white;
+}
+
+header {
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 0, 221, 0.8)), to(rgb(255, 255, 255, 0)));;
+	list-style-type: none;
+    justify-content: space-between;
+    color: white;
+	padding: 1vw;
+}
+
+input[type=submit]{
+	margin: 20px;
+	background-color: rgba(255, 0, 221, 0.6);
+	border: none;
+    border-radius: 30px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+	font-size: 16px;
+	transition: color 0.3s;
+}
+
+input[type=submit]:hover{
+	background-color: rgba(255, 0, 221, 0.8);
+}
+
+input[type=radio] {
+	size: 18px;
+}
+
+#frame{
+	display: inline-flex;
+	margin-top : 50px;
+	margin-bottom : 50px;
+	justify-content: center;
+	align-items: center;
+	height : 12vmin;
+	border-radius: 30px;
+	background-color: rgba(255, 255, 255, 0.60);
+	width: 640px;
+}
+
+.frame{
+	width: 9vmin;
+}
+
+.frame-overview{
+	width: 640px;
+	height: 480px;
+}
+
+#frame-ajax2 {
+	position:relative;
+	display: flex;
+	align-items: center;
+}
+
+#player {
+    -webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+	border-radius: 30px;
+	position: relative;
+	height: auto;
+	width: 640px;
+	margin: auto;
+	margin-top: inherit;
+}
+
+#capture {
+	margin-top: 20px;
+}
+
+#frame-ajax {
+	position:relative;
+	left: -640px;
+}
+
+#frame-over{
+	margin-top: inherit;
+	position: absolute;
+	width: 640px;
+	justify-content: center;
+}
+
+.count:before {
+	counter-increment: section;
+	content: counter(section);
+  }
+
+#canvas {
+	border-radius: 30px;
+	position: relative;
+	height: 480px;
+	width: 640px;
+	margin: auto;
+	margin-top: inherit;
+	display: none;
+	width: 640px;
+}
+
+#img-prev{
+	border-radius: 30px;
+	position: absolute;
+	max-height: 480px;
+	max-width: 640px;
+	margin: auto;
+	margin-top: inherit;
+}
+
+#img-prev2{
+	padding-top: 50px;
+}
+
+#fileFormprev{
+	display: flex;
+	max-width: 640px;
+	max-height: 580px;
+	position: relative;
+	justify-content: center;
+}
+
+#reload {
+	color: black;
+	text-decoration: underline;
+	display: none;
+}
+
+#reload2{
+	color: black;
+	text-decoration: underline;
+}
+
+#sendForm1 {
+	display: none;
+}
+
+.gallery_us {
+	max-height: 240px; 
+	max-width: 320px;
+}
+
+#logo-img {
+	width : 8vw;
+}
+
+.alert-danger{
+    background-color: #ff4747;
+    color: black;
+    padding: 20px;
+    margin: 0px;
+}
+
+.alert-success{
+    background-color: #3bed88;
+    color: #eeeeee;
+    padding: 20px;
+    margin: 0px;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+	padding : 20px;	
+}
+
+li {
+	display: inline;
+	padding: 20px;
+	color: black;
+}
+
+li > a {
+	color: white;
+	text-decoration: none;	
+}
+
+li > a:hover {
+	color: white;
+	text-decoration: none;
+	text-shadow: 0px 0px 20px purple;	
+}
+
+.navbar {
+    overflow: hidden;
+	position: relative;
+	top: 10;
+	left: 0;
+    width: 100%;
+}
+
+#login-form {
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px black;
+    background-color: white;
+    text-align: left;
+}
+
+#passwd-forgot {
+	color: black;
+	text-decoration: underline;
+}
+
+label {
+	margin:5px;
+}
+
+#mini-form {
+	padding: 20px;
+}
+
+.form-group * {
+	display: flex;
+}
+
+#login-form .submit {
+    display: block;
+    width: 100%;
+	background-color: rgba(255, 0, 221, 0.6);
+	color: white;
+    border: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 20px;
+    transition: 0.5s background-color;
+    -webkit-transition: 0.5s background-color;
+	padding: 10px;
+}
+
+#login-form .submit:hover {
+	background-color: rgba(255, 0, 221, 0.8);
+}
+
+#previous_err a, #previous_succ a {
+    color: #424ef4;
+    text-decoration: none;
+}
+
+title {
+    margin: 0px;
+    font-size: 3vw;
+    margin-left: 20px;
+}
+
+#sign-inup {
+    font-size: 1.5vw;
+    right: 0px;
+    top: 0px;
+    padding: 20px;
+}
+
+#sign-sep {
+    display: inline;
+    margin: 0px;
+    padding: 0px;
+}
+
+#sign-inup a {
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    text-decoration: none;
+    transition: 0.2s text-shadow;
+    -webkit-transition: 0.2s text-shadow;
+}
+
+#sign-inup a:hover {
+    text-shadow: 0px 0px 20px white;
+}
+
+#frontage {
+    width: 50%;
+    margin: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px black;
+}    
+
+#product-tabs {
+    color: white;
+    background-color: #149e5d;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.tab {
+    width: 100%;
+    padding: 20px;
+    margin: 10px;
+	border-radius: 5px;
+    color: white;
+    text-decoration: none;
+	transition: background-color 0.5s, color 0.5s;
+	-webkit-transition: background-color 0.5s, color 0.5s;
+}
+
+.tab:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+}
+
+
+.selected-tab:hover {
+    background-color: white;
+    color: black;
+}
+
+.selected-tab {
+    background-color: white;
+    color: black;
+}
+
+.product-tempi {
+    display: flex;
+    justify-content: space-around;
+    border-top: 2px #c1c1c1 solid;
+    padding: 50px;
+    transition: 0.5s background-color;
+}
+
+.product-tempi:hover {
+    background-color: rgba(193, 193, 193, 0.2);
+}
+
+.product-tempi p, .product-tempi img {
+    display: inline-block;
+    text-align: justify;
+    margin: 20px;
+}
+
+.product-tempi img {
+    max-height: 200px;
+}
+
+#workspace {
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+@media screen and (max-width: 1280px)
+{
+	html {
+		margin: 0px;
+		padding: 0px;
+		width: 100%; 
+		height: 100%;
+		background-color: aquamarine;
+		background-repeat: no-repeat;
+		text-align: center;
+	}
+	
+	body {
+		font-family: "ana";
+		margin: 0px;
+		text-align: -webkit-center;
+		min-height: 100%;
+		position: relative;
+		padding-bottom: 100px;
+		max-width: 100%;
+	}
+
+	img {
+		border-radius: 30px;
+		max-width: 330px;
+		max-height: 480px;
+	}
+	
+	header {
+		background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 0, 221, 0.8)), to(rgb(255, 255, 255, 0)));;
+		list-style-type: none;
+		justify-content: space-between;
+		color: white;
+		padding: 1vw;
+		width: 100%;
+	}
+
+	.navbar {
+		display: flex;
+		flex-direction: column;
+	}
+
+	li {
+		padding: 15px;
+	}
+
+	#logo-img {
+		height: 100px;
+		width: auto;
+	}
+
+	#player {
+		max-width: 330px;
+	}
+
+	#frame {
+		width: 330px;
+		height: 100px;
+	}
+
+	#frame-ajax {
+		position:relative;
+		left: -330px;
+	}
+
+	#workspace {
+		display: flex;
+		flex-direction: column;
+	}
+
+	#canvas {
+		height: 248px;
+		width: auto;
+	}
+
+	#small-form {
+		max-width: 330px;
+	}
+
+	.frame-overview {
+		max-width: 330px;
+		height: 230px;
+	}
+
+	.frame{
+		width: 60px;
+	}
+	
+	#frame-ajax2 {
+		position:relative;
+		display: flex;
+		align-items: center;
+	}
+
+	#img-prev{
+		border-radius: 30px;
+		position: absolute;
+		max-height: 480px;
+		max-width: 330px;
+		margin: auto;
+		margin-top: inherit;
+	}
+
+	#webcamForm{
+		max-width: 330px;
+	}
+
+	.gallery_us{
+		max-width: 290px;
+	}
+
+	#menu_upload{
+		display: flex;
+		flex-direction: column;
+		margin-left: -30px;
+	}
+
+	input[type="text"]{
+		border-color: lightgrey;
+		border-width: 1px;
+	}
+
+	input[type="password"]{
+		border-color: lightgrey;
+		border-width: 1px;
+	}
+
+	input[type="email"]{
+		border-color: lightgrey;
+		border-width: 1px;
+	}
+
+	#fileFormprev{
+		display: flex;
+		max-width: 640px;
+		max-height: 580px;
+		position: relative;
+		justify-content : center;
+	}
+
+	#img-prev2{
+		padding-top: 0px;
+	}
+
+}
